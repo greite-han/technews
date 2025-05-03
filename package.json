@@ -1,0 +1,24 @@
+{
+  "name": "technews",
+  "version": "1.0.0",
+  "description": "A tech news website hosted on Firebase.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "firebase deploy --token $FIREBASE_TOKEN"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greite-han/technews.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greite-han/technews/issues"
+  },
+  "homepage": "https://github.com/greite-han/technews#readme",
+  "devDependencies": {
+    "firebase-tools": "^13.0.0"
+  }
+}
