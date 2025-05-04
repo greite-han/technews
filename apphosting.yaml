@@ -1,0 +1,9 @@
+runConfig:
+  minInstances: 0
+  maxInstances: 1
+  cpu: 1
+  memoryMiB: 512
+  concurrency: 80
+  timeoutSeconds: 60
+  serviceAccount: default
+  port: 8080 
