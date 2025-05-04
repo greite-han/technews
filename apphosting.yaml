@@ -5,5 +5,4 @@ runConfig:
   memoryMiB: 512
   concurrency: 80
   timeoutSeconds: 300
-  serviceAccount: firebase-app-hosting-compute@technews-7352e.iam.gserviceaccount.com
   port: 8080 

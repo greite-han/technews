@@ -16,5 +16,10 @@
   "functions": {
     "source": ".",
     "runtime": "nodejs18"
+  },
+  "apphosting": {
+    "backend": {
+      "serviceAccount": "firebase-app-hosting-compute@technews-7352e.iam.gserviceaccount.com"
+    }
   }
 }
