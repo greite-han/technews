@@ -2,19 +2,15 @@
 // public/index.html이 직접 서빙됩니다. 
 
 const express = require('express');
+const path = require('path');
 const app = express();
 
-// 로깅 미들웨어 추가
-app.use((req, res, next) => {
-  console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
-  next();
-});
+// 정적 파일 서빙
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static('public'));
-
-app.get('/*', (req, res) => {
-  console.log(`Serving index.html for ${req.url}`);
-  res.sendFile(__dirname + '/public/index.html');
+// 모든 요청에 대해 index.html을 서빙
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 const PORT = process.env.PORT || 8080;
