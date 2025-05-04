@@ -4,9 +4,16 @@
 const express = require('express');
 const app = express();
 
+// 로깅 미들웨어 추가
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+  next();
+});
+
 app.use(express.static('public'));
 
 app.get('/*', (req, res) => {
+  console.log(`Serving index.html for ${req.url}`);
   res.sendFile(__dirname + '/public/index.html');
 });
 
