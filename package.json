@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "firebase deploy --token $FIREBASE_TOKEN",
-    "start": "firebase serve",
+    "start": "node index.js",
     "build": "echo 'No build step required'"
   },
   "repository": {
