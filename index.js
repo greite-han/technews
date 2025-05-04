@@ -4,7 +4,8 @@ const app = express();
 
 app.use(express.static('public'));
 
-app.get('*', (req, res) => {
+// 모든 경로에 대해 index.html을 서빙
+app.get('/*', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
