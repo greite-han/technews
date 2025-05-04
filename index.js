@@ -6,10 +6,10 @@ const path = require('path');
 const app = express();
 
 // 정적 파일 서빙
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 // 모든 요청에 대해 index.html을 서빙
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
