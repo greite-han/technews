@@ -5,6 +5,11 @@ const app = express();
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Health check endpoint
+app.get('/_ah/health', (req, res) => {
+  res.status(200).send('ok');
+});
+
 // All routes serve index.html for SPA
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
