@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "technews-7352e"
+  },
+  "targets": {
+    "technews-7352e": {
+      "hosting": {
+        "technews": [
+          "technews-7352e"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
