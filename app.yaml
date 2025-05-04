@@ -1,4 +1,10 @@
 runtime: nodejs18
 env: standard
 
-entrypoint: npm start 
+handlers:
+  - url: /.*
+    static_files: public/index.html
+    upload: public/index.html
+
+  - url: /
+    static_dir: public 
