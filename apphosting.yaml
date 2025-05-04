@@ -4,6 +4,7 @@ runConfig:
   cpu: 1
   memoryMiB: 512
   concurrency: 80
-  timeoutSeconds: 60
+  timeoutSeconds: 300
   serviceAccount: default
-  port: 8080 
+  port: 8080
+  startupTimeoutSeconds: 300 
